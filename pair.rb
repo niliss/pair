@@ -6,4 +6,15 @@ File.open(ARGV[0], 'r') do |name|
 	end
 end
 
-print names
+
+
+def pairs(students)
+	students.each do |student|
+		
+		random_nr = rand(0...students.length)
+		puts students[random_nr]
+	end
+
+end
+
+pairs(names)
