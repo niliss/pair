@@ -7,16 +7,29 @@ File.open(ARGV[0], 'r') do |name|
 end
 
 
-
 def pairs(students)
+	rand_students = []
 	while students.length > 0 do
 		
 		random_nr = rand(0...students.length)
-		puts students[random_nr]
-		students.delete(students[random_nr])
-		print students
+		student =  students[random_nr]
+		students.delete(student)
+		#print students
+		rand_students << student
 	end
+	count = 0
+	rand_students.each do |student|
+	
 
+
+
+	end
 end
+
+
+
+
+
+
 
 pairs(names)
