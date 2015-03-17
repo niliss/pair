@@ -2,6 +2,7 @@ names = []
 
 File.open(ARGV[0], 'r') do |name|  
 	name.each_line do |line|
+		line.delete!("\n")
 		names << line
 	end
 end
@@ -17,13 +18,17 @@ def pairs(students)
 		#print students
 		rand_students << student
 	end
-	count = 0
-	rand_students.each do |student|
 	
-
-
-
+	while rand_students.length > 0 do
+		if rand_students.length > 1
+			student1 = rand_students.pop
+			student2 = rand_students.pop
+			puts student1 + " - " + student2
+		else
+			puts rand_students.pop
+		end
 	end
+
 end
 
 
