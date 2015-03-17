@@ -9,10 +9,12 @@ end
 
 
 def pairs(students)
-	students.each do |student|
+	while students.length > 0 do
 		
 		random_nr = rand(0...students.length)
 		puts students[random_nr]
+		students.delete(students[random_nr])
+		print students
 	end
 
 end
