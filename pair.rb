@@ -1,7 +1,9 @@
+names = []
 
 File.open(ARGV[0], 'r') do |name|  
-  while line = name
-    puts line  
-  end  
-end  
-  
+	name.each_line do |line|
+		names << line
+	end
+end
+
+print names
