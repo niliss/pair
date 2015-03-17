@@ -31,10 +31,4 @@ def pairs(students)
 
 end
 
-
-
-
-
-
-
 pairs(names)
